@@ -7,8 +7,8 @@ let defaultTheme: Theme = `light`;
 let ThemeContext = React.createContext(defaultTheme);
 
 export function ThemeProvider(props: { theme: Theme; children: ReactElement }) {
-    // @ts-ignore
     let provider = (
+        // @ts-ignore
         <>
             <ThemeContext.Provider value={props.theme}>
                 {props.children}
