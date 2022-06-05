@@ -9,11 +9,9 @@ let ThemeContext = React.createContext(defaultTheme);
 export function ThemeProvider(props: { theme: Theme; children: ReactElement }) {
     let provider = (
         // @ts-ignore
-        <>
-            <ThemeContext.Provider value={props.theme}>
-                {props.children}
-            </ThemeContext.Provider>
-        </>
+        <ThemeContext.Provider value={props.theme}>
+            {props.children}
+        </ThemeContext.Provider>
     );
     return provider;
 }
